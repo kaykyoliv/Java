@@ -4,9 +4,9 @@ import dominio.Anime;
 import service.AnimeComparators;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
+// Reference to a static method
 public class MethodReferenceTest01 {
 
     public static void main(String[] args) {
