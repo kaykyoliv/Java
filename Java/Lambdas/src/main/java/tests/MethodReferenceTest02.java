@@ -6,7 +6,7 @@ import service.AnimeComparators;
 import java.util.ArrayList;
 import java.util.List;
 
-// Reference to a static method
+// Reference to an instance method of a particular object
 public class MethodReferenceTest02 {
 
     public static void main(String[] args) {
