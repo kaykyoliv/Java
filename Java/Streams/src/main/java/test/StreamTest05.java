@@ -1,26 +1,46 @@
 package test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import dominio.LightNovel;
+
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamTest05 {
+
+    private static List<LightNovel> lightNovels = new ArrayList<>(List.of(
+            new LightNovel("Tensei Shittara", 8.99),
+            new LightNovel("Overlord", 10.99),
+            new LightNovel("Violet Evergarden", 5.99),
+            new LightNovel("No Game no life", 2.99),
+            new LightNovel("Fullmetal Alchemist", 5.99),
+            new LightNovel("Kumo desuga", 1.99),
+            new LightNovel("Kumo desuga", 1.99),
+            new LightNovel("Monogatari", 4.00)
+    ));
+
     public static void main(String[] args) {
-        List<String> words = List.of("Kame", "Hame", "Ha");
-        String[] letters = words.get(0).split("");
-        System.out.println(Arrays.toString(letters));
 
-        List<String[]> collect = words.stream().map(x -> x.split("")).collect(Collectors.toList());
-        Stream<String> stream = Arrays.stream(letters);
-        List<String> letters2 = words.stream()
-                .map(w -> w.split(""))//Stream<String[]>
-                .flatMap(Arrays::stream)
-                .collect(Collectors.toList());//Stream<String>
+        System.out.println(lightNovels.stream().anyMatch(x -> x.getPrice() > 9));
+        System.out.println(lightNovels.stream().allMatch(x -> x.getPrice() < 100));
+        System.out.println(lightNovels.stream().noneMatch(x -> x.getPrice() < 0));
 
-        System.out.println(letters2);
+        lightNovels.stream()
+                .filter(ln -> ln.getPrice() > 3)
+                .findAny()
+                .ifPresent(System.out::println);
+
+        lightNovels.stream()
+                .filter(ln -> ln.getPrice() > 3)
+                .sorted(Comparator.comparing(LightNovel::getPrice).reversed())
+                .findFirst()
+                .ifPresent(System.out::println);
+
+        lightNovels.stream()
+                .filter(ln -> ln.getPrice() > 3)
+                .max(Comparator.comparing(LightNovel::getTitle))
+                .ifPresent(System.out::println);
+
 
     }
 }
