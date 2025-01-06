@@ -6,7 +6,7 @@ import dominio.LightNovel;
 import java.util.*;
 import java.util.stream.Collectors;
 
-//Grouping lightNovel by category using collect(Collectors.groupingBy)
+
 public class StreamTest11 {
 
     private static List<LightNovel> lightNovels = new ArrayList<>(List.of(

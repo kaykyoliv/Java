@@ -13,7 +13,6 @@ import static dominio.Promotion.NORMAL_PRICE;
 import static dominio.Promotion.UNDER_PROMOTION;
 import static java.util.stream.Collectors.*;
 
-//Grouping lightNovel by category using collect(Collectors.groupingBy)
 public class StreamTest14 {
 
     private static List<LightNovel> lightNovels = new ArrayList<>(List.of(
@@ -36,9 +35,6 @@ public class StreamTest14 {
 
         Map<Category, LinkedHashSet<Promotion>> collect2 = lightNovels.stream().collect(groupingBy(LightNovel::getCategory, mapping(StreamTest14::getPromotion, toCollection(LinkedHashSet::new))));
         System.out.println(collect2);
-
-
-
 
     }
 

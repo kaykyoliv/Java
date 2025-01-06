@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
 
-//Grouping lightNovel by category using collect(Collectors.groupingBy)
+
 public class StreamTest13 {
 
     private static List<LightNovel> lightNovels = new ArrayList<>(List.of(

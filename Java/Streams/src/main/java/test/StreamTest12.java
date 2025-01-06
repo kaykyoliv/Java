@@ -13,7 +13,6 @@ import static dominio.Promotion.NORMAL_PRICE;
 import static dominio.Promotion.UNDER_PROMOTION;
 import static java.util.stream.Collectors.groupingBy;
 
-//Grouping lightNovel by category using collect(Collectors.groupingBy)
 public class StreamTest12 {
 
     private static List<LightNovel> lightNovels = new ArrayList<>(List.of(
