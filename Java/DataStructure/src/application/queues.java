@@ -32,12 +32,15 @@ public class queues {
 		queue.offer("3");
 		queue.offer("4");
 		queue.add("5");
+		
+		//System.out.println(queue.isEmpty());
+		//System.out.println(queue.size());
+		//System.out.println(queue.contains("2"));
 			
 		System.out.println(queue.isEmpty());
 		
 		System.out.println(queue);
-		
-		
+
 
 	}
 
