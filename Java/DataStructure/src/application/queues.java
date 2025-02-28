@@ -41,7 +41,5 @@ public class queues {
 		
 		System.out.println(queue);
 
-
 	}
-
 }
