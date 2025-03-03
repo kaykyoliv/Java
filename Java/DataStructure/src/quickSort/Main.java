@@ -36,7 +36,7 @@ public class Main {
 		int i = start - 1;
 
 		for (int j = start; j < end; j++) {
-			if (array[j] < pivot) {
+			if (array[j] <= pivot) {
 				i++;
 				int temp = array[i];
 				array[i] = array[j];
